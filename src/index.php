@@ -2,6 +2,17 @@
 
    // echo "<h1>Welcome to DogeCar</h1>"
     include("search.php");
+    $search = new Search();
+    
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $query = $_POST['fname'];
+    if (empty($query)) {
+        echo "Name is empty";
+    } else {
+        $search->query($query);
+    }
+}
 	
 ?>
 <html>
