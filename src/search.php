@@ -18,7 +18,7 @@ function __construct(){
 
 function query($Search) {
 
-    $sql = "SELECT id, make, model FROM inventory WHERE make = " + $Search;
+    $sql = $conn->prepare("SELECT id, make, model FROM inventory WHERE make = \"" + $Search + " \" ");
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
