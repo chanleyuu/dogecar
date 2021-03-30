@@ -6,9 +6,9 @@
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // collect value of input field
-    $query = $_POST['fname'];
+    $query = $_POST['search'];
     if (empty($query)) {
-        echo "Name is empty";
+        echo "Search bar is empty";
     } else {
         $search->query($query);
     }
