@@ -21,5 +21,5 @@
 <img src="../res/dogehead.png" alt="HTML5 Icon" style="width:128px;height:128px;">
 <form action = "<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
 <input type="text" name="search" />
-<p><input type="submit" value="Search"/></p>
+<p><input type="submit" value="Search"/><img src="../res/search.png" alt="HTML5 Icon" style="width:128px;height:128px;"></p>
 </body>
