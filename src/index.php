@@ -17,6 +17,15 @@
 ?>
 <html>
 <head>DogeCar></head>
+<body>>
+<img src="../res/dogehead.png" alt="HTML5 Icon" style="width:128px;height:128px;">
 <form action = "<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
 <input type="text" name="search" />
-<p><input type="submit" value="Search"/></p>
+<p><input type="submit" value="Search"/><img src="../res/search.png" alt="HTML5 Icon" style="width:128px;height:128px;"></p>
+<br>
+<table>
+    <tr>
+        <th><img src="../res/crying doge and buff doge.png" alt="HTML5 Icon" style="width:512px;height:512px;"></th>
+    </tr>
+</table>
+</body>
