@@ -17,7 +17,7 @@
 ?>
 <style>
 .yes {
-  background-color: #4CAF50;
+  background-color: #41bcff;
   background-image: "../res/search.png";
   border: none;
   color: white;
