@@ -2,6 +2,8 @@
 	
 	// Create connection
 class Search {
+	public $conn;
+	
     function __construct(){
         $servername = "localhost";
         $username = "root";
@@ -31,8 +33,9 @@ class Search {
         } else {
             echo "0 results";
         }
+		$conn->close();
     }
-    $conn->close();
+    
 
 }
 ?>
