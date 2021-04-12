@@ -31,7 +31,6 @@
 }
 </style>
 <html>
-<<<<<<< HEAD
 <head>DogeCar</head>
 <body>
 <table>
@@ -52,14 +51,6 @@
 			<br>
 		</th>
 	</tr>
-=======
-<head>DogeCar></head>
-<body>>
-<img src="../res/dogehead.png" alt="HTML5 Icon" style="width:128px;height:128px;">
-<form action = "<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
-<input type="text" name="search" />
-<p><input type="submit" href="./searchpage.php" value="Search"/><img src="../res/search.png" alt="HTML5 Icon" style="width:128px;height:128px;"></p>
->>>>>>> 8b68261 (yes)
 <br>
 <table>
     <tr>
