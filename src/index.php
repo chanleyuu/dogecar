@@ -39,6 +39,9 @@
 			<img src="../res/dogehead.png" alt="HTML5 Icon" style="width:128px;height:128px;">
 		</th>
 		<th>
+            <img src="../res/dogehead.png" alt="HTML5 Icon" style="width:256px;height:128px;">
+		</th>
+		<th>
 			<form action = "<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
 		</th>
 		<th>
