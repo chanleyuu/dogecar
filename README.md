@@ -1,4 +1,2 @@
-This file has been changed!
-and again.
-A kingdom for a stage.
-it works
+This is code for an e-commerce website project.
+It contains code for querying databases and such
