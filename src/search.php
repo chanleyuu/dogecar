@@ -2,7 +2,10 @@
 	
 	// Create connection
 class Search {
+    include("searchpage.php");
+
 	public $conn;
+	public $results;
 	
     function __construct(){
         $servername = "localhost";

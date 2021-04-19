@@ -1,6 +1,19 @@
+<?php 
+     include("search.php");
+    $search = new Search();
+    
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $query = $_GET['search'];
+    if (empty($query)) {
+       // echo "Search bar is empty";
+    } else {
+        $search->query($query);
+    }
+?>
 <style>
 .yes {
-  background-color: #4CAF50;
+  background-color: #41bcff;
   background-image: "../res/search.png";
   border: none;
   color: white;
@@ -25,13 +38,13 @@
             <img src="../res/logo.png" alt="HTML5 Icon" style="width:256px;height:128px;">
 		</th>
 		<th>
-			<form action = "<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
+			<form action = "<?php echo $_SERVER["PHP_SELF"]; ?>" method="GET">
 		</th>
 		<th>
 			<input type="text" name="search" />
 		</th>
 		<th>
-			<p><input class="yes" type="submit" value="Search"><img src="../res/search.png" alt="HTML5 Icon" style="width:128px;height:128px;"></input></p>
+			<p><input class="yes" type="submit" value="Search" href="./searchpage.php"></input></p>
 			<br>
 			<br>
 			<br>
@@ -44,13 +57,16 @@
         <th>
             <?php
             //results are passed as an array and displayed on this page.
+            
+            class resultpage() {
                 function display($results){
                 
-                foreach ($results as $value) {
-                    echo "$value <br>";
-                }
+                    foreach ($results as $value) {
+                        echo "$value <br>";
+                    }
                     
                 }
+            }
             ?>
         </th>
     </tr>
