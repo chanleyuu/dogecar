@@ -12,6 +12,8 @@
     }
 ?>
 <style>
+@import "style.css"
+
 .yes {
   background-color: #41bcff;
   background-image: "../res/search.png";

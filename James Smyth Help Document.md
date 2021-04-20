@@ -1,4 +1,6 @@
- DogeCar Website Help Document:
+James Smyth
+
+DogeCar Website Help Document:
 
 Group Members: James Smyth, Conall Hanley, David Quigley, Mark McCormick, Michael Hegarty
 

@@ -27,16 +27,21 @@ class Search {
         $sql = $conn->prepare("SELECT id, make, model FROM inventory WHERE make = ? ");
         $conn->bind_param('s', $Search);
         $result = $conn->query($sql);
+        $results;
 
         if ($result->num_rows > 0) {
         // output data of each row
+            $results = array($result->num_rows);
             while($row = $result->fetch_assoc()) {
-                echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+                $count = 0;
+                //echo "id: " . $row["id"]. " - Name: " . $row["make"]. " " . $row["model"]. "<br>";
+                $result[$count] = row;
             }
         } else {
             echo "0 results";
         }
 		$conn->close();
+		return $results;
     }
     
 
