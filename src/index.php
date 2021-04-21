@@ -1,7 +1,7 @@
 <?php
 	include("search.php");
 	$search = new Search();
-    	$newURL =
+    	$newURL = "./searchpage.php";
     
 	if ($_SERVER["REQUEST_METHOD"] == "GET") {
 	// collect value of input field
