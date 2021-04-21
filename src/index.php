@@ -18,13 +18,15 @@
 }
 </style>
 <html>
-<head>DogeCar</head>
-<body>
- <iframe src = "header.php" height="20%" width="100%" > 
-<br>
-<table>
-    <tr>
-        <th><img src="../res/crying doge and buff doge.png" alt="HTML5 Icon" style="width:512px;height:512px;"></th>
-    </tr>
-</table>
+<head>
+    <iframe src = "header.php" height="20%" width="100%" > 
+</head>
+    <body>
+    
+    <br>
+    <table>
+        <tr>
+            <th><img src="../res/crying doge and buff doge.png" alt="HTML5 Icon" style="width:512px;height:512px;"></th>
+        </tr>
+    </table>
 </body>

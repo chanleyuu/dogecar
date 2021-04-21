@@ -33,10 +33,6 @@
 		</th>
 		<th>
 			<p><input class="yes" type="submit" value="Search" ></input></p>
-			<br>
-			<br>
-			<br>
-			<br>
 		</th>
 	</tr>
 </table>
