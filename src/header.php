@@ -26,7 +26,7 @@ echo "		<th>";
 echo '			<img src="../res/logo.png" alt="HTML5 Icon" style="width:256px;height:128px;">';
 echo "		</th>";
 echo "		<th>";
-echo '			<form action = "<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">';
+echo '			<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">';
 echo "		</th>";
 echo "		<th>";
 echo '			<input type="text" name="search" />';
