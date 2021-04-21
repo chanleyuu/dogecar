@@ -26,7 +26,7 @@
             <?php
             //results are passed as an array and displayed on this page.
             
-            class resultpage() {
+            class resultpage {
                 function display($results){
                 
                     foreach ($results as $value) {
