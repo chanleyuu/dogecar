@@ -18,9 +18,7 @@
 <html>
 <head>DogeCar</head>
 <body>
-<?php 
-    include("header.php");
-?>
+    <iframe src = "header.php" height="20%" width="100%" > 
 <br>
 <table>
     <tr>
