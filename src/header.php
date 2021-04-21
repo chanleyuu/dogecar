@@ -11,8 +11,8 @@
 	       // echo "Search bar is empty";
 		} else {
 		//	$search->query($query);
-			header("Location: .$newURL.php");
-			die();
+			header("Location: .$newURL");
+			exit();
 			
 	   		}
 	}	
