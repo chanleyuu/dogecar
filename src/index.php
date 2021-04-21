@@ -1,7 +1,23 @@
-
+<?php
+	include("search.php");
+	$search = new Search();
+    	$newURL =
+    
+	if ($_SERVER["REQUEST_METHOD"] == "GET") {
+	// collect value of input field
+	$query = $_GET['search'];
+		if (empty($query)) {
+	       // echo "Search bar is empty";
+		} else {
+			$search->query($query);
+			header("Location: .$newURL.php");
+			die();
+			
+	   		}
+	}
+?>
 <style>
 @import "style.css"
-
 .yes {
   background-color: #41bcff;
   background-image: "../res/search.png";
@@ -19,7 +35,7 @@
 <html>
 <head>DogeCar</head>
 <body>
- <iframe src = "header.html" height="100%" width="100%" > 
+ <iframe src = "header.php" height="20%" width="100%" > 
 <br>
 <table>
     <tr>
