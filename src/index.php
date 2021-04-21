@@ -20,7 +20,7 @@
 <head>DogeCar</head>
 <body>
 <?php 
-    include("header.php");
+    use ./header.php;;
 ?>
 <br>
 <table>

@@ -2,7 +2,7 @@
 	
 	// Create connection
 class Search {
-    include("searchpage.php");
+    use ./searchpage.php;
 
 	public $conn;
 	public $results;

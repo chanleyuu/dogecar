@@ -6,14 +6,15 @@
 	if ($_SERVER["REQUEST_METHOD"] == "GET") {
 	// collect value of input field
 	$query = $_GET['search'];
-	if (empty($query)) {
-       // echo "Search bar is empty";
-	} else {
-		$search->query($query);
-		header("Location: .$newURL.php");
-		die();
-   	}
-}
+		if (empty($query)) {
+	       // echo "Search bar is empty";
+		} else {
+			$search->query($query);
+			header("Location: .$newURL.php");
+			die();
+			
+	   		}
+	}
 ?>
  <table>
 	<tr>
