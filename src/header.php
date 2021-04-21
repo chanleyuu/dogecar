@@ -16,24 +16,24 @@
 			
 	   		}
 	}	
-?>
- <table>
-	<tr>
-		<th>
-			<img src="../res/dogehead.png" alt="HTML5 Icon" style="width:128px;height:128px;">
-		</th>
-		<th>
-			<img src="../res/logo.png" alt="HTML5 Icon" style="width:256px;height:128px;">
-		</th>
-		<th>
-			<form action = "<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
-		</th>
-		<th>
-			<input type="text" name="search" />
-		</th>
-		<th>
-			<p><input class="yes" type="submit" value="Search" ></input></p>
-		</th>
-	</tr>
-</table>
+
+echo "<table>"
+echo "	<tr>"
+echo "		<th>"
+echo "			<img src="../res/dogehead.png" alt="HTML5 Icon" style="width:128px;height:128px;">"
+echo "		</th>"
+echo "		<th>"
+echo "			<img src="../res/logo.png" alt="HTML5 Icon" style="width:256px;height:128px;">"
+echo "		</th>"
+echo "		<th>"
+echo "			<form action = "<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">"
+echo "		</th>"
+echo "		<th>"
+echo "			<input type="text" name="search" />"
+echo "		</th>"
+echo "		<th>"
+echo "			<p><input class="yes" type="submit" value="Search" ></input></p>"
+echo "		</th>"
+echo "	</tr>"
+echo "</table>"
 

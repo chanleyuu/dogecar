@@ -19,7 +19,9 @@
 </style>
 <html>
 <head>
-    <object data="header.php" height="20%" width="50%"></object>
+    <?php
+        include("header.php");
+    ?>
     
 </head>
 <body>
