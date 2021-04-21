@@ -1,15 +1,16 @@
 <?php
-	include("search.php");
-	$search = new Search();
-    	$newURL = "./searchpage.php";
+	//include("search.php");
+	//$search = new Search();
+    
     
 	if ($_SERVER["REQUEST_METHOD"] == "GET") {
 	// collect value of input field
 	$query = $_GET['search'];
+	$newURL = "./searchpage.php?search=".$query;
 		if (empty($query)) {
 	       // echo "Search bar is empty";
 		} else {
-			$search->query($query);
+		//	$search->query($query);
 			header("Location: .$newURL.php");
 			die();
 			
@@ -31,7 +32,7 @@
 			<input type="text" name="search" />
 		</th>
 		<th>
-			<p><input class="yes" type="submit" value="Search" href="./searchpage.php"></input></p>
+			<p><input class="yes" type="submit" value="Search" ></input></p>
 			<br>
 			<br>
 			<br>

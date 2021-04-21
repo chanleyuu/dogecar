@@ -1,5 +1,6 @@
 <?php
-include("searchpage.php");
+//include("searchpage.php");
+
 	// Create connection
 class Search {
 

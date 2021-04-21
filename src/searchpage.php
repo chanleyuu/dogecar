@@ -25,16 +25,19 @@
         <th>
             <?php
             //results are passed as an array and displayed on this page.
-            
-            class resultpage {
-                function display($results){
                 
-                    foreach ($results as $value) {
-                        echo "id: " . $value["id"]. " - Make: " . $value["make"]. " Model" . $value["model"]. "<br>";
-                    }
-                    
+                
+                include("search.php");
+                
+                $query = $_GET['search'];
+                $Buscar = new Search();
+                $results = $Buscar->query($query);
+                
+                foreach ($results as $value) {
+                    echo "id: " . $value["id"]. " - Make: " . $value["make"]. " Model" . $value["model"]. "<br>";
                 }
-            }
+                    
+             
             ?>
         </th>
     </tr>
