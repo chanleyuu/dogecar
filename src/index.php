@@ -19,9 +19,7 @@
 <html>
 <head>DogeCar</head>
 <body>
-<?php 
-    use ./header.php;;
-?>
+ <!--#include virtual="header.php" -->
 <br>
 <table>
     <tr>
