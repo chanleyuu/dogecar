@@ -19,10 +19,9 @@
 </style>
 <html>
 <head>
-   <!-- <iframe src = "header.php" height="20%" width="100%" > -->
+    <iframe src = "header.php" height="20%" width="50%" >
 </head>
 <body>
-    <p>HAHAHAHHAHAHHAHAHHAHHA"</p>
     <br>
     <table>
         <tr>
