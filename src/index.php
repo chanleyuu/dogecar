@@ -19,7 +19,7 @@
 </style>
 <html>
 <head>
-    <object src="header.php" height="20%" width="50%"></object>
+    <object data="header.php" height="20%" width="50%"></object>
     
 </head>
 <body>
