@@ -1,5 +1,5 @@
 <?php
-import("searchpage.php");
+include("searchpage.php");
 	// Create connection
 class Search {
 
