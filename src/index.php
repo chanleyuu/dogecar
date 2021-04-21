@@ -19,7 +19,7 @@
 <html>
 <head>DogeCar</head>
 <body>
- <object data="header.php"></object>
+ <object data="header.html"></object>
 <br>
 <table>
     <tr>
