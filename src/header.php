@@ -5,7 +5,7 @@
     
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// collect value of input field
-	$query = $_POST['search'];
+	$query = $_POST['Search'];
 	$newURL = "searchpage.php?search=".$query;
 		if (empty($query)) {
 	       // echo "Search bar is empty";
@@ -26,7 +26,7 @@ echo "		<th>";
 echo '			<img src="../res/logo.png" alt="HTML5 Icon" style="width:256px;height:128px;">';
 echo "		</th>";
 echo "		<th>";
-echo '			<form action=\"<?php echo $_SERVER["PHP_SELF"]; ?>\" method="POST">';
+echo '			<form method="POST">';
 echo "		</th>";
 echo "		<th>";
 echo '			<input type="text" name="search" />';
