@@ -19,7 +19,7 @@
 <html>
 <head>DogeCar</head>
 <body>
- <!--#include virtual="header.php" -->
+ <object data="header.php"></object>
 <br>
 <table>
     <tr>
