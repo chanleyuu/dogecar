@@ -3,9 +3,9 @@
 	//$search = new Search();
     
     
-	if ($_SERVER["REQUEST_METHOD"] == "GET") {
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// collect value of input field
-	$query = $_GET['search'];
+	$query = $_POST['search'];
 	$newURL = "./searchpage.php?search=".$query;
 		if (empty($query)) {
 	       // echo "Search bar is empty";
@@ -26,7 +26,7 @@
 			<img src="../res/logo.png" alt="HTML5 Icon" style="width:256px;height:128px;">
 		</th>
 		<th>
-			<form action = "<?php echo $_SERVER["PHP_SELF"]; ?>" method="GET">
+			<form action = "<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
 		</th>
 		<th>
 			<input type="text" name="search" />
