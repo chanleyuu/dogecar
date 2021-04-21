@@ -18,7 +18,7 @@
 <html>
 <head>DogeCar</head>
 <body>
-    <iframe src = "header.php" height="200px" width="100%" > 
+    <object data="header.php" height="20%" width="50%"></object>
 <br>
 <table>
     <tr>
