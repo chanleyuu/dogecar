@@ -2,12 +2,12 @@
 	
 	// Create connection
 class Search {
-    import("searchpage.php");
 
 	public $conn;
 	public $results;
 	
     function __construct(){
+        $page = import("searchpage.php");
         $servername = "localhost";
         $username = "root";
         $password = "";
