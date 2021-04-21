@@ -2,7 +2,7 @@
 	
 	// Create connection
 class Search {
-    import("./searchpage.php");
+    import("searchpage.php");
 
 	public $conn;
 	public $results;
