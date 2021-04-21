@@ -19,7 +19,7 @@
 <html>
 <head>DogeCar</head>
 <body>
- <object data="header.html"></object>
+ <iframe src = "header.html" height="100%" width="100%" > 
 <br>
 <table>
     <tr>
