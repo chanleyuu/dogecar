@@ -30,7 +30,7 @@
                 function display($results){
                 
                     foreach ($results as $value) {
-                        echo "$value <br>";
+                        echo "id: " . $value["id"]. " - Make: " . $value["make"]. " Model" . $value["model"]. "<br>";
                     }
                     
                 }

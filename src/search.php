@@ -35,7 +35,7 @@ class Search {
             while($row = $result->fetch_assoc()) {
                 $count = 0;
                 //echo "id: " . $row["id"]. " - Name: " . $row["make"]. " " . $row["model"]. "<br>";
-                $result[$count] = row;
+                $result[$count] = $row;
             }
         } else {
             echo "0 results";
