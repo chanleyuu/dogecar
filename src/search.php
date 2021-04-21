@@ -1,5 +1,5 @@
 <?php
-	
+import("searchpage.php");
 	// Create connection
 class Search {
 
@@ -7,7 +7,6 @@ class Search {
 	public $results;
 	
     function __construct(){
-        $page = import("searchpage.php");
         $servername = "localhost";
         $username = "root";
         $password = "";
