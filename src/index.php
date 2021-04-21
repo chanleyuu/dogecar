@@ -19,7 +19,7 @@
 </style>
 <html>
 <head>
-    <iframe src="header.php" height="20%" width="50%"></iframe>
+    <object src="header.php" height="20%" width="50%"></object>
     
 </head>
 <body>
