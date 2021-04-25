@@ -17,10 +17,10 @@
 	   		}
 	}	
 
-echo "<table>";
+echo '<table id="banner">';
 echo "	<tr>";
 echo "		<th>";
-echo '			<img src="../res/dogehead.png" alt="HTML5 Icon" style="width:128px;height:128px;">';
+echo '			<img src="../res/dogehead.png" alt="HTML5 Icon" style="width:128px;height:128px;" href="./index.php">';
 echo "		</th>";
 echo "		<th>";
 echo '			<img src="../res/logo.png" alt="HTML5 Icon" style="width:256px;height:128px;">';
@@ -34,6 +34,7 @@ echo "		</th>";
 echo "		<th>";
 echo '		<p><input class="yes" type="submit" value="Search" ></input></p>';
 echo "		</th>";
+echo '      <th><a href="loginpage.php">Login</a></th>';
 echo "	</tr>";
 echo "</table>";
 ?>
