@@ -31,7 +31,7 @@
             
             $query = $_POST['username']; 
             
-            $sql = $conn->prepare("SELECT * FROM user WHERE name = ? ");
+            $sql = $conn->prepare("SELECT * FROM customer_account WHERE uname = ? ");
             $conn->bind_param('s', $query);
             $result = $conn->query($sql);
             //$results;
@@ -43,7 +43,7 @@
             while($row = $result->fetch_assoc()) {
                 //$count = 0;
                 //echo "id: " . $row["id"]. " - Name: " . $row["make"]. " " . $row["model"]. "<br>";
-                $uname = $row["username"];
+                $uname = $row["uname"];
                 $pass = $row["password"];
                 break;
             }
