@@ -29,8 +29,10 @@
             $pass;
             $msg = '';
             
+            $query = $_POST['username']; 
+            
             $sql = $conn->prepare("SELECT * FROM user WHERE name = ? ");
-            $conn->bind_param('s', $_POST['username']);
+            $conn->bind_param('s', $query);
             $result = $conn->query($sql);
             //$results;
 
