@@ -37,21 +37,12 @@
             
 
                 $conn = new mysqli($servername, $username, $password, $dbname);
-<<<<<<< HEAD
-				
-				// Check connection
-				if ($conn->connect_error) {
-				  die("Connection failed: " . $conn->connect_error);
-				} 
-            
-=======
                 
                 // Check connection
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 } 
->>>>>>> 951264b0db9ca0a1cd704eeadb48615d61b27ad2
-            
+
                 $uname;
                 $pass;
                 $msg = '';
