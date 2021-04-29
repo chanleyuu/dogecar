@@ -24,8 +24,8 @@ class Search {
 
     function query($Search) {
 
-        $sql = $conn->prepare("SELECT id, make, model FROM inventory WHERE make = ? ");
-        $conn->bind_param('s', $Search);
+        $sql = $conn->prepare("SELECT id, make, model FROM inventory WHERE make = ".$Search);
+        //$conn->bind_param('s', $Search);
         $result = $conn->query($sql);
         $results;
 
