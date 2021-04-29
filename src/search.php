@@ -14,16 +14,22 @@ class Search {
         $dbname = "dogecar";
         
 
-        $conn = new mysqli($servername, $username, $password, $dbname);
+        //$conn = new mysqli($servername, $username, $password, $dbname);
         // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+       // if ($conn->connect_error) {
+      //      die("Connection failed: " . $conn->connect_error);
+      //  }
     }
 
 
     function query($Search) {
 
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+    
         $sql = $conn->prepare("SELECT id, make, model FROM inventory WHERE make = ".$Search);
         //$conn->bind_param('s', $Search);
         $result = $conn->query($sql);
