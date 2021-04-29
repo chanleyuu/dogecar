@@ -95,7 +95,7 @@
             ?>" method = "POST">
             <h4 class = "form-signin-heading"></h4>
              <input type = "text" class = "form-control" 
-               name = "username" placeholder = "username"></input>
+               name = 'username' placeholder = "username"></input>
                </br>
             <input type = "password" class = "form-control"
                name = "password" placeholder = "password" required></input>
