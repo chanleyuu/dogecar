@@ -52,7 +52,7 @@
 
                 if ($result->num_rows > 0 && isset($_POST['login'])) {
                 // output data of each row
-                $results = array($result->num_rows);
+               // $results = array($result->num_rows);
                 while($row = $result->fetch_assoc()) {
                     //$count = 0;
                     //echo "id: " . $row["id"]. " - Name: " . $row["make"]. " " . $row["model"]. "<br>";
