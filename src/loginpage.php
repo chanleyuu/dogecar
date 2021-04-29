@@ -37,7 +37,11 @@
             
 
                 $conn = new mysqli($servername, $username, $password, $dbname);
-            
+                
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                } 
             
                 $uname;
                 $pass;
@@ -47,19 +51,19 @@
                 
                 $sql = $conn->prepare("SELECT * FROM customer_account WHERE uname = ".$query);
                 //$conn->bind_param('s', $query);
-                $result = $conn->query($sql);
+                $result = $sql->execute();
                 //$results;
 
                 if ($result->num_rows > 0 && isset($_POST['login'])) {
                 // output data of each row
                // $results = array($result->num_rows);
-                while($row = $result->fetch_assoc()) {
-                    //$count = 0;
-                    //echo "id: " . $row["id"]. " - Name: " . $row["make"]. " " . $row["model"]. "<br>";
-                    $uname = $row["uname"];
-                    $pass = $row["password"];
-                    break;
-                }
+                    while($row = $result->fetch_assoc()) {
+                        //$count = 0;
+                        //echo "id: " . $row["id"]. " - Name: " . $row["make"]. " " . $row["model"]. "<br>";
+                        $uname = $row["uname"];
+                        $pass = $row["password"];
+                        break;
+                    }
                 
                 //The hash is combination of the username's hash and the password to help obscure the hash
                 //This hash is stored in the password collumn to prevent the password from being discovered
