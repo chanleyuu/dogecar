@@ -41,7 +41,7 @@ class Search {
     
         $sql = $conn->prepare("SELECT id, make, model FROM inventory WHERE make = ?");
         $sql->bind_param('s', $Search);
-        $result = $sql->execute();
+        $result = $conn->query($sql);
         $results;
 
         if ($result->num_rows > 0) {
