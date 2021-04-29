@@ -90,16 +90,16 @@
             action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
             ?>" method = "POST">
             <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
-            <input type = "text" class = "form-control" 
-               name = "username"  
-               required autofocus></br>
+             <input type = "text" class = "form-control" 
+               name = "username" placeholder = "username"></input>
+               </br>
             <input type = "password" class = "form-control"
-               name = "password" required>
+               name = "password" placeholder = "password" required></input>
             <button class = "btn btn-lg btn-primary btn-block" type = "submit" 
                name = "login">Login</button>
          </form>
 			
-         Click here to clean <a href = "logout.php" tite = "Logout">Session.
+         Logout <a href = "logout.php" tite = "Logout">Session.
          
       </div> 
       
