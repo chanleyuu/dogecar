@@ -6,6 +6,10 @@ class Search {
 
 	public $conn;
 	public $results;
+	public $servername;
+     public   $username;
+    public    $password;
+      public  $dbname;
 	
     function __construct(){
         $servername = "localhost";
