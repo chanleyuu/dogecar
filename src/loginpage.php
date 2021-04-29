@@ -12,7 +12,7 @@
         <table id="banner">
 	<tr>
 <th>
-<img src="../res/dogehead.png" alt="HTML5 Icon" style="width:128px;height:128px;" href="./index.php">
+<img src="../res/dogehead.png" alt="HTML5 Icon" style="width:128px;height:128px;" href="index.php">
 </th>
 <th>
 <img src="../res/logo.png" alt="HTML5 Icon" style="width:256px;height:128px;">
@@ -89,7 +89,7 @@
          <form class = "form-signin" role = "form" 
             action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
             ?>" method = "POST">
-            <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
+            <h4 class = "form-signin-heading"></h4>
              <input type = "text" class = "form-control" 
                name = "username" placeholder = "username"></input>
                </br>
