@@ -49,9 +49,9 @@
                 
                 $query = $_POST['username']; 
                 
-                $sql = sprintf("SELECT * FROM customer_account WHERE uname = '%s'", mysql_real_escape_string($query));
-                //$conn->bind_param('s', $query);
-                $result = mysql_query($sql);
+                $sql = $conn->prepare("SELECT * FROM customer_account WHERE uname = '%s'");
+                $conn->bind_param('s', $query);
+                $result = $sql->execute();
                 //$results;
 
                 if ($result->num_rows > 0 && isset($_POST['login'])) {
