@@ -49,8 +49,8 @@
                 
                 $query = $_POST['username']; 
                 
-                $sql = $conn->prepare("SELECT * FROM customer_account WHERE uname = ".$query);
-                //$conn->bind_param('s', $query);
+                $sql = $conn->prepare("SELECT * FROM customer_account WHERE uname = ?");
+                $conn->bind_param('s', $query);
                 $result = $sql->execute();
                 //$results;
 
