@@ -27,6 +27,11 @@ class Search {
 
 
     function query($Search) {
+    
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "dogecar";
 
         $conn = new mysqli($servername, $username, $password, $dbname);
         //Check connection
