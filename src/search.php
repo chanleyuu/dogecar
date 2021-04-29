@@ -39,9 +39,9 @@ class Search {
             die("Connection failed: " . $conn->connect_error);
         }
     
-        $sql = $conn->prepare("SELECT id, make, model FROM inventory WHERE make = ?");
-        $conn->bind_param('s', $Search);
-        $result = $sql->execute();
+        $sql = sprintf("SELECT id, make, model FROM inventory WHERE make = '%s'", mysql_real_escape_string($Search));
+       // $conn->bind_param('s', $Search);
+        $result = mysql_query($sql);
         $results;
 
         if ($result->num_rows > 0) {
