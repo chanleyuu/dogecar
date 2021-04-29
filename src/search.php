@@ -39,7 +39,7 @@ class Search {
             die("Connection failed: " . $conn->connect_error);
         }
     
-        $sql = $conn->prepare("SELECT id, make, model FROM inventory WHERE make = ".$Search);
+        $sql = $conn->prepare("SELECT id, make, model FROM inventory WHERE make = \"".$Search."\"");
         //$conn->bind_param('s', $Search);
         $result = $conn->query($sql);
         $results;
