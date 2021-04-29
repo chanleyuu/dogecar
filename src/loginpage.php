@@ -1,5 +1,7 @@
+
+
 <?php
-    include("header.php");
+    //include("header.php");
     ob_start();
     session_start();
 ?>
@@ -7,7 +9,16 @@
 <html lang = "en">
 
     <head>
-        
+        <table id="banner">
+	<tr>
+<th>
+<img src="../res/dogehead.png" alt="HTML5 Icon" style="width:128px;height:128px;" href="./index.php">
+</th>
+<th>
+<img src="../res/logo.png" alt="HTML5 Icon" style="width:256px;height:128px;">
+</th>
+</tr>
+</table>
     </head>
     
 <body>
@@ -50,8 +61,10 @@
                     break;
                 }
                 
+                $passhash = hash('sha512', $_POST['username']).$_POST['password'];
+                
                 if ($_POST['username'] == $uname && 
-                    $_POST['password'] == $pass) {
+                    hash('sha512', $passhash) == $pass) {
                     $_SESSION['valid'] = true;
                     $_SESSION['timeout'] = time();
                     $_SESSION['username'] = $uname;
