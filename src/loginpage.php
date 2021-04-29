@@ -61,6 +61,8 @@
                     break;
                 }
                 
+                //The hash is combination of the username's hash and the password to help obscure the hash
+                //This hash is stored in the password collumn to prevent the password from being discovered
                 $passhash = hash('sha512', $_POST['username']).$_POST['password'];
                 
                 if ($_POST['username'] == $uname && 
