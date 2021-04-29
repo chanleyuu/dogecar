@@ -37,12 +37,20 @@
             
 
                 $conn = new mysqli($servername, $username, $password, $dbname);
+<<<<<<< HEAD
 				
 				// Check connection
 				if ($conn->connect_error) {
 				  die("Connection failed: " . $conn->connect_error);
 				} 
             
+=======
+                
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                } 
+>>>>>>> 951264b0db9ca0a1cd704eeadb48615d61b27ad2
             
                 $uname;
                 $pass;
@@ -50,21 +58,21 @@
                 
                 $query = $_POST['username']; 
                 
-                $sql = $conn->prepare("SELECT * FROM customer_account WHERE uname = ".$query);
-                //$conn->bind_param('s', $query);
-                $result = $conn->query($sql);
+                $sql = $conn->prepare("SELECT * FROM customer_account WHERE uname = ?");
+                $conn->bind_param('s', $query);
+                $result = $sql->execute();
                 //$results;
 
                 if ($result->num_rows > 0 && isset($_POST['login'])) {
                 // output data of each row
-                $results = array($result->num_rows);
-                while($row = $result->fetch_assoc()) {
-                    //$count = 0;
-                    //echo "id: " . $row["id"]. " - Name: " . $row["make"]. " " . $row["model"]. "<br>";
-                    $uname = $row["uname"];
-                    $pass = $row["password"];
-                    break;
-                }
+               // $results = array($result->num_rows);
+                    while($row = $result->fetch_assoc()) {
+                        //$count = 0;
+                        //echo "id: " . $row["id"]. " - Name: " . $row["make"]. " " . $row["model"]. "<br>";
+                        $uname = $row["uname"];
+                        $pass = $row["password"];
+                        break;
+                    }
                 
                 //The hash is combination of the username's hash and the password to help obscure the hash
                 //This hash is stored in the password collumn to prevent the password from being discovered
@@ -96,7 +104,7 @@
             ?>" method = "POST">
             <h4 class = "form-signin-heading"></h4>
              <input type = "text" class = "form-control" 
-               name = "username" placeholder = "username"></input>
+               name = 'username' placeholder = "username"></input>
                </br>
             <input type = "password" class = "form-control"
                name = "password" placeholder = "password" required></input>
