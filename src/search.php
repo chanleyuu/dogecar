@@ -39,8 +39,8 @@ class Search {
             die("Connection failed: " . $conn->connect_error);
         }
     
-        $sql = $conn->prepare("SELECT id, make, model FROM inventory WHERE make = ?");
-        $sql->bind_param('s', $Search);
+        $sql = preg_replace('~[^A-Za-z0-9]~', '', "SELECT id, make, model FROM inventory WHERE make = ".$Search);
+        //$sql->bind_param('s', $Search);
         $result = $conn->query($sql);
         $results;
 
