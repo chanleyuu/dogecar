@@ -32,6 +32,8 @@ class Search {
         $username = "root";
         $password = "";
         $dbname = "dogecar";
+        
+        $results;
 
         $conn = new mysqli($servername, $username, $password, $dbname);
         //Check connection
@@ -39,10 +41,10 @@ class Search {
             die("Connection failed: " . $conn->connect_error);
         }
     
-        $sql = preg_replace('~[^A-Za-z0-9]~', '', "SELECT id, make, model FROM inventory WHERE make = ".$Search);
+        $sql = preg_replace('/[^a-zA-Z]/', '', "SELECT id, make, model FROM inventory WHERE make = ".$Search);
         //$sql->bind_param('s', $Search);
         $result = $conn->query($sql);
-        $results;
+       
 
         if ($result->num_rows > 0) {
         // output data of each row
