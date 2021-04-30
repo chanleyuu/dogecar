@@ -49,9 +49,9 @@
                 
                 $query = $_POST['username']; 
                 
-                $sql = $conn->prepare("SELECT * FROM customer_account WHERE uname = '%s'");
-                $conn->bind_param('s', $query);
-                $result = $sql->execute();
+                $sql = "SELECT id, make, model FROM inventory WHERE make = ".preg_replace('/[^a-zA-Z]/', '', $Search);
+                //$conn->bind_param('s', $query);
+                $result = $conn->query($sql);
                 //$results;
 
                 if ($result->num_rows > 0 && isset($_POST['login'])) {
