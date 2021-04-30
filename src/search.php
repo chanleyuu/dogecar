@@ -41,7 +41,8 @@ class Search {
             die("Connection failed: " . $conn->connect_error);
         }
     
-        $sql = preg_replace('/[^a-zA-Z]/', '', "SELECT id, make, model FROM inventory WHERE make = ".$Search);
+        //$sql = preg_replace('/[^a-zA-Z]/', '', "SELECT id, make, model FROM inventory WHERE make = ".$Search);
+        $sql = "SELECT id, make, model FROM inventory WHERE make = ".$Search;
         //$sql->bind_param('s', $Search);
         $result = $conn->query($sql);
        
