@@ -35,6 +35,7 @@ echo "		<th>";
 echo '		<p><input class="yes" type="submit" value="Search" ></input></p>';
 echo "		</th>";
 echo '      <th><a href="loginpage.php">Login</a></th>';
+echo '      <th><a href="createaccount.php">Create Account</a></th>';
 echo "	</tr>";
 echo "</table>";
 ?>

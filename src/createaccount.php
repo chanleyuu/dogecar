@@ -63,7 +63,7 @@
                         $sql = $conn->prepare("INSERT INTO customer_account (fname, lname, email, uname, password) values(".$fname.$lname.$email.$uname.hash('sha512', $passhash).")";
                         $sql->execute();
                         
-                        echo 'You have entered valid use name and password';
+                        echo 'Account has been created';
                     }
                     else {
                         echo 'passwords don\'t match' 
