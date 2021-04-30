@@ -43,7 +43,7 @@ class Search {
     
         $sql = "SELECT id, make, model FROM inventory WHERE make = ".preg_replace('/[^a-zA-Z]/', '', $Search);
         //$sql->bind_param('s', $Search);
-        $result = $conn->query($sql);
+        $result = $conn->query($sql, MYSQLI_STORE_RESULT);
        
 
         if ($result->num_rows > 0) {
