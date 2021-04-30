@@ -45,8 +45,8 @@
                 
                 $uname = $_POST['username']; 
                 
-                $sql = $conn->prepare("SELECT * FROM customer_account WHERE uname = ? ");
-                $conn->bind_param('s', $uname);
+                $sql = "SELECT id, make, model FROM inventory WHERE make = ".preg_replace('/[^a-zA-Z]/', '', $uname);
+                //$conn->bind_param('s', $query);
                 $result = $conn->query($sql);
                 //$results;
 
@@ -61,7 +61,7 @@
                     
                     if ($_POST['repeatpassword'] == $pass){
                         $sql = $conn->prepare("INSERT INTO customer_account (fname, lname, email, uname, password) values(".$fname.$lname.$email.$uname.hash('sha512', $passhash).")";
-                        $conn->query($sql);
+                        $sql->execute();
                         
                         echo 'You have entered valid use name and password';
                     }
