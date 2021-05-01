@@ -76,7 +76,6 @@
             $conn->close();
 		
 		}
-		}
         ?>
          </div> <!-- /container -->
       
