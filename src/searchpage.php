@@ -30,17 +30,33 @@
                 
                 include("search.php");
                 
+                $num_products_on_each_page = 8;
+                
                 $query = $_GET['search'];
                 $Buscar = new Search();
                 $results = $Buscar->query($query, $pdo);
                 
-                foreach ($results as $value) {
-                    echo '<p href="index.php?page=product&id="'.$value["id"].'>Make: '.$value["make"]." Model".$value["model"]."</p><br>";
-                }
+                /*foreach ($results as $value) {
+                    echo '<p href="index.php?page=product&id="'.$value["id"].'>Make: '.$value["name"]." ".$value["desc"]."</p><br>";
+                } */
                     
              
             ?>
         </th>
+        <div class="products-wrapper">
+        <?php foreach ($result as $product): ?>
+        <a href="index.php?page=product&id=<?=$product['id']?>" class="product">
+            <img src="../res/<?=$product['img']?>" width="250" height="200" alt="<?=$product['name']?>">
+            <span class="name"><?=$product['name']?></span>
+            <span class="price">
+                &dollar;<?=$product['price']?>
+                <?php if ($product['rrp'] > 0): ?>
+                <span class="rrp">&dollar;<?=$product['rrp']?></span>
+                <?php endif; ?>
+            </span>
+        </a>
+        <?php endforeach; ?>
+    </div>
     </tr>
 </table>
 </body>
