@@ -5,6 +5,7 @@
    // ob_start();
    // session_start();
 ?>
+<?=template_header('Home')?>
 
 <html lang = "en">
  <?php /*
@@ -33,7 +34,7 @@
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
-                $dbname = "dogecar";
+                $dbname = "shoppingcart";
             
 
                 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -109,3 +110,4 @@
       
    </body>
 </html>
+<?=template_footer()?>
