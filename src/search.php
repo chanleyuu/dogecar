@@ -88,4 +88,3 @@ class Search {
     <input class="yes" type="submit" value="Search" ></input>
     </form>
     
-<?=template_footer()?>
