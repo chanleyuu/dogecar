@@ -2,8 +2,8 @@
 
 <?php
     //include("header.php");
-    ob_start();
-    session_start();
+   // ob_start();
+   // session_start();
 ?>
 
 <html lang = "en">
