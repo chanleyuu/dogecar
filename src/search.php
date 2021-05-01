@@ -1,6 +1,6 @@
 <?=template_header('Search')?>
 <?php
-include("index.php");
+//include("index.php");
 
 	// Create connection
 	
@@ -88,3 +88,4 @@ class Search {
     <input class="yes" type="submit" value="Search" ></input>
     </form>
     
+<?=template_footer()?>
