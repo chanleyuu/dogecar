@@ -77,7 +77,7 @@ class Search {
         //$sql->bind_param('s', $Search);
         $result = $conn->query($sql, MYSQLI_STORE_RESULT);
         */
-        $stmt = $pdo->prepare("SELECT id, name FROM products WHERE name LIKE '%".$Search."%' ");
+        $stmt = $pdo->prepare("SELECT id, name, img FROM products WHERE name LIKE '%".$Search."%' ");
        // $stmt->execute(array('?' => $Search));
         $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -16,7 +16,6 @@
 }
 </style>
 <html>
-<head>DogeCar</head>
 <body>
     <!--<object data="header.php" height="20%" width="50%"></object> -->
     
