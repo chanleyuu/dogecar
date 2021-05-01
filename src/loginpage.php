@@ -1,21 +1,21 @@
 
 
 <?php
-    include("functions.php");
+    //include("header.php");
     ob_start();
     session_start();
 ?>
-<?=template_header('Products')?>
+
 <html lang = "en">
 
     <head>
         <table id="banner">
 	<tr>
 <th>
-
+<img src="../res/dogehead.png" alt="HTML5 Icon" style="width:128px;height:128px;" href="index.php">
 </th>
 <th>
-
+<img src="../res/logo.png" alt="HTML5 Icon" style="width:256px;height:128px;">
 </th>
 </tr>
 </table>
@@ -30,18 +30,18 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ( !empty($_POST['username']) 
                && !empty($_POST['password'])) {
-                //$servername = "localhost";
-                //$username = "root";
-                //$password = "";
-                //$dbname = "dogecar";
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "dogecar";
             
 
-                $conn =  pdo_connect_mysql();  //new mysqli($servername, $username, $password, $dbname);
+                $conn = new mysqli($servername, $username, $password, $dbname);
                 
                 // Check connection
-               /* if ($conn->connect_error) {
+                if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
-                }  */
+                } 
 
                 $uname;
                 $pass;
@@ -49,8 +49,8 @@
                 
                 $query = $_POST['username']; 
                 
-                $sql = $conn->prepare("SELECT id, make, model FROM inventory WHERE make = ? "); //.preg_replace('/[^a-zA-Z]/', '', $Search);
-                $conn->bindValue(1, $query, PDO::PARAM_STR);
+                $sql = "SELECT id, make, model FROM inventory WHERE make = ".preg_replace('/[^a-zA-Z]/', '', $Search);
+                //$conn->bind_param('s', $query);
                 $result = $conn->query($sql);
                 //$results;
 
@@ -109,5 +109,3 @@
       
    </body>
 </html>
-
-<?=template_footer()?>
