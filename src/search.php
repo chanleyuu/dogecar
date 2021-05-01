@@ -41,7 +41,7 @@ class Search {
     }
 
 
-    function query($Search) {
+    function query($Search, $pdo) {
     
         $servername = "localhost";
         $username = "root";
