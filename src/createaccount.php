@@ -60,7 +60,7 @@
                     $passhash = hash('sha512', $_POST['username']).$_POST['password'];
                     
                     if ($_POST['repeatpassword'] == $pass){
-                        $sql = $conn->prepare("INSERT INTO customer_account (fname, lname, email, uname, password) values(".$fname.$lname.$email.$uname.hash('sha512', $passhash).")";
+                        $sql = $conn->prepare("INSERT INTO customer_account (fname, lname, email, uname, password) values(".$fname.$lname.$email.$uname.hash('sha512', $passhash).")");
                         $sql->execute();
                         
                         echo 'Account has been created';

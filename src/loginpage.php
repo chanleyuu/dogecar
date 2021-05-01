@@ -1,7 +1,7 @@
 
 
 <?php
-    //include("header.php");
+    include("functions.php");
     ob_start();
     session_start();
 ?>
@@ -30,18 +30,18 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ( !empty($_POST['username']) 
                && !empty($_POST['password'])) {
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "dogecar";
+                //$servername = "localhost";
+                //$username = "root";
+                //$password = "";
+                //$dbname = "dogecar";
             
 
-                $conn = new mysqli($servername, $username, $password, $dbname);
+                $conn =  pdo_connect_mysql();  //new mysqli($servername, $username, $password, $dbname);
                 
                 // Check connection
-                if ($conn->connect_error) {
+               /* if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
-                } 
+                }  */
 
                 $uname;
                 $pass;
@@ -49,8 +49,8 @@
                 
                 $query = $_POST['username']; 
                 
-                $sql = "SELECT id, make, model FROM inventory WHERE make = ".preg_replace('/[^a-zA-Z]/', '', $Search);
-                //$conn->bind_param('s', $query);
+                $sql = $conn->prepare("SELECT id, make, model FROM inventory WHERE make = ? ") //.preg_replace('/[^a-zA-Z]/', '', $Search);
+                $conn->bindValue(1, $query, PDO::PARAM_STR);
                 $result = $conn->query($sql);
                 //$results;
 

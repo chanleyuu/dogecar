@@ -18,14 +18,14 @@ echo <<<EOT
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>$title</title>
+		<title img=../res/logo.png></title>
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 	</head>
 	<body>
         <header>
             <div class="content-wrapper">
-            <img src="imgs\dogehead.jpg"  style="width:128px;height:128px;" href="index.php">
+            <img src="../res/dogehead.png"  style="width:128px;height:128px;" href="index.php">
                 <h1>DogeCar</h1>
 
 
