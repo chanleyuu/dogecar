@@ -1,4 +1,21 @@
 <?=template_header('Search')?>
+<style>
+@import "style.css"
+
+.yes {
+  background-color: #41bcff;
+  background-image: "../res/search.png";
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
 <?php
 //include("index.php");
 
