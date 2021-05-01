@@ -4,7 +4,8 @@
 
 
 <html lang = "en">
-
+<?php
+/*
     <head>
         <table id="banner">
 	<tr>
@@ -17,7 +18,9 @@
 </tr>
 </table>
     </head>
-    
+   */ ?>
+   
+<?=template_header('Register')?>
 <body>
 
     <h2>Enter Username and Password</h2>
@@ -111,3 +114,4 @@
       
    </body>
 </html>
+<?=template_footer()?>
