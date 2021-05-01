@@ -104,11 +104,11 @@
             <input type = "password" class = "form-control"
                name = "password" placeholder = "password" required>Password</input>
                </br>
-            <input type = "repeatpassword" class = "form-control"
-               name = "repeatpassword" required>Repeat Password</input>
+            <input type = "password" class = "form-control"
+               name = "repeatpassword" placeholder = "repeat password" required>Repeat Password</input>
                <br>
             <button class = "btn btn-lg btn-primary btn-block" type = "submit" 
-               name = "login">Create</button>
+               name = "login" href="complete.php">Create</button>
          </form>
          
       </div> 

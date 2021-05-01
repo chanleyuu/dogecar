@@ -18,7 +18,8 @@
 <html>
 <head>DogeCar</head>
 <body>
-    <object data="header.php" height="20%" width="50%"></object>
+    <!--<object data="header.php" height="20%" width="50%"></object> -->
+    <?=template_header('Search')?>
 <br>
 <table>
     <tr>
@@ -34,7 +35,7 @@
                 $results = $Buscar->query($query);
                 
                 foreach ($results as $value) {
-                    echo "id: " . $value["id"]. " - Make: " . $value["make"]. " Model" . $value["model"]. "<br>";
+                    echo '<p href="index.php?page=product&id="'.$value["id"]'>Make: '.$value["make"]." Model".$value["model"]."<br>";
                 }
                     
              
@@ -43,3 +44,4 @@
     </tr>
 </table>
 </body>
+<?=template_footer()?>
