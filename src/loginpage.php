@@ -7,7 +7,7 @@
 ?>
 
 <html lang = "en">
-
+ <?php /*
     <head>
         <table id="banner">
 	<tr>
@@ -20,7 +20,7 @@
 </tr>
 </table>
     </head>
-    
+   */ ?>
 <body>
 
     <h2>Enter Username and Password</h2>
