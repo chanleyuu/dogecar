@@ -36,7 +36,7 @@
                 $dbname = "dogecar";
             
 
-                $conn = new mysqli($servername, $username, $password, $dbname);
+               // $conn = new mysqli($servername, $username, $password, $dbname);
             
             
                 $fname= $_POST['firstname'];
@@ -48,12 +48,13 @@
                 
                 $uname = $_POST['username']; 
                 
-                $sql = "SELECT id, make, model FROM inventory WHERE make = ".preg_replace('/[^a-zA-Z]/', '', $uname);
+                $sql = $pdo->prepare("SELECT id, make, model FROM inventory WHERE make = ".preg_replace('/[^a-zA-Z]/', '', $uname));
                 //$conn->bind_param('s', $query);
-                $result = $conn->query($sql);
+                $sql->execute();
+                $result = $sql->fetchAll(PDO::FETCH_ASSOC);
                 //$results;
 
-                if ($result->num_rows > 0 && isset($_POST['login'])) {
+                if ($result->count > 0) {
                 // output data of each row
                     echo 'username already exists';
                 }
@@ -63,7 +64,7 @@
                     $passhash = hash('sha512', $_POST['username']).$_POST['password'];
                     
                     if ($_POST['repeatpassword'] == $pass){
-                        $sql = $conn->prepare("INSERT INTO customer_account (fname, lname, email, uname, password) values(".$fname.$lname.$email.$uname.hash('sha512', $passhash).")");
+                        $sql = $pdo->prepare("INSERT INTO customer_account (fname, lname, email, uname, password) values(".$fname.$lname.$email.$uname.hash('sha512', $passhash).")");
                         $sql->execute();
                         
                         echo 'Account has been created';
@@ -85,8 +86,7 @@
       <div class = "container">
       
          <form class = "form-signin" role = "form" 
-            action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
-            ?>" method = "POST">
+             method = "POST">
             <h4 class = "form-signin-heading"></h4>
             
             <input type = "firstname" class = "form-control"

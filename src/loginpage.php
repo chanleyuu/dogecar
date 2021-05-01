@@ -50,19 +50,20 @@
                 
                 $query = $_POST['username']; 
                 
-                $sql = "SELECT id, make, model FROM inventory WHERE make = ".preg_replace('/[^a-zA-Z]/', '', $Search);
+                $sql = $pdo->prepare("SELECT id, make, model FROM inventory WHERE make = ".preg_replace('/[^a-zA-Z]/', '', $Search));
                 //$conn->bind_param('s', $query);
-                $result = $conn->query($sql);
+                $sql->execute();
+                $result = $sql->fetchAll(PDO::FETCH_ASSOC);
                 //$results;
 
-                if ($result->num_rows > 0 && isset($_POST['login'])) {
+                if ($result->count > 0 && isset($_POST['login'])) {
                 // output data of each row
                // $results = array($result->num_rows);
-                    while($row = $result->fetch_assoc()) {
+                    foreach ($result as $value) {
                         //$count = 0;
                         //echo "id: " . $row["id"]. " - Name: " . $row["make"]. " " . $row["model"]. "<br>";
-                        $uname = $row["uname"];
-                        $pass = $row["password"];
+                        $uname = $value["uname"];
+                        $pass = $value["password"];
                         break;
                     }
                 
@@ -92,8 +93,7 @@
       <div class = "container">
       
          <form class = "form-signin" role = "form" 
-            action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
-            ?>" method = "POST">
+             method = "POST">
             <h4 class = "form-signin-heading"></h4>
              <input type = "text" class = "form-control" 
                name = 'username' placeholder = "username"></input>
