@@ -3,6 +3,20 @@
 //include("searchpage.php");
 
 	// Create connection
+	
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	// collect value of input field
+	$query = $_POST['search'];
+	$newURL = "searchpage.php?search=".$query;
+		if (empty($query)) {
+	       // echo "Search bar is empty";
+		} else {
+		//	$search->query($query);
+			header("Location: ".$newURL);
+			exit();
+			
+	   		}
+	}
 class Search {
 
 	public $conn;
@@ -62,19 +76,6 @@ class Search {
 		return $results;
     }
     
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	// collect value of input field
-	$query = $_POST['search'];
-	$newURL = "searchpage.php?search=".$query;
-		if (empty($query)) {
-	       // echo "Search bar is empty";
-		} else {
-		//	$search->query($query);
-			header("Location: ".$newURL);
-			exit();
-			
-	   		}
-	}
 
 }
 ?>
