@@ -113,7 +113,7 @@ INSERT INTO `products` (`id`, `name`, `desc`, `price`, `rrp`, `quantity`, `img`,
 (17, '1989 Lada Riva', '<p> Engine: 1298cc,  inline four </p> <p>Transmission: 5-speed Manual</p> <p>Rear-wheel drive</p> <p>Power 175 bhp.0-60mph: 16.2 seconds </p>', '5789.00', '0.00', 4, 'lada.jpg', '2021-04-28 15:21:36'),
 (18, '1985 Peugeot 205 GTI', '<p> Engine: 1898cc, inline four</p> <p>Transmission: 5-speed Manual</p> <p>Front-wheel drive</p> <p>Power 135 bhp.0-60mph: 7.6 seconds </p>', '13499.00', '0.00', 2, '205.jpg', '2021-04-28 15:21:36'),
 (19, '2015 Subaru BRZ', '<p> Engine: 1998cc, inline four</p> <p>Transmission: 6-speed Manual</p> <p>Rear-wheel drive</p> <p>Power 200 bhp.0-60mph: 6.3 seconds </p>', '34000.00', '0.00', 3, 'brz.jpg', '2021-04-28 15:34:18'),
-(20, '1964 Trabant 601', '<p> Engine: 500cc, Two Stroke</p> <p>Transmission: 4-speed Manual</p> <p>front-wheel drive</p> <p>Power 35 bhp.0-60mph: 21 seconds </p>', '200.00', '0.00', 8, 'trabant.jpg', '2021-04-28 15:34:18');
+(20, '1964 Trabant 601', '<p> Engine: 500cc, Two Stroke</p> <p>Transmission: 4-speed Manual</p> <p>front-wheel drive</p> <p>Power 35 bhp.0-60mph: 21 seconds </p>', '200.00', '0.00', 8, 'trabant.jpg', '2021-04-28 15:34:18'),
 (21, '1965 Pontiac GTO', '<p>400 cu in (6.6 L) Pontiac V8</p> <p>Transmission: 4-speed Manual</p> <p>rear-wheel drive</p> <p>Power 360 bhp.0-60mph: 7 seconds </p>', '200.00', '0.00', 8, 'gto.webp', '2021-04-28 15:34:18');
 COMMIT;
 
