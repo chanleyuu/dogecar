@@ -35,7 +35,7 @@
                 $results = $Buscar->query($query);
                 
                 foreach ($results as $value) {
-                    echo '<p href="index.php?page=product&id="'.$value["id"]'>Make: '.$value["make"]." Model".$value["model"]."<br>";
+                    echo '<p href="index.php?page=product&id="'.$value["id"].'>Make: '.$value["make"]." Model".$value["model"]."</p><br>";
                 }
                     
              
