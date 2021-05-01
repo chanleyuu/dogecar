@@ -48,7 +48,7 @@
                 
                 $uname = $_POST['username']; 
                 
-                $sql = $pdo->prepare("SELECT id, make, model FROM inventory WHERE make = ".preg_replace('/[^a-zA-Z]/', '', $uname));
+                $sql = $pdo->prepare("SELECT * FROM customer_account WHERE uname = '".preg_replace('/[^a-zA-Z]/', '', $query)."'");
                 //$conn->bind_param('s', $query);
                 $sql->execute();
                 $result = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -64,7 +64,7 @@
                     $passhash = hash('sha512', $_POST['username']).$_POST['password'];
                     
                     if ($_POST['repeatpassword'] == $pass){
-                        $sql = $pdo->prepare("INSERT INTO customer_account (fname, lname, email, uname, password) values(".$fname.$lname.$email.$uname.hash('sha512', $passhash).")");
+                        $sql = $pdo->prepare("INSERT INTO customer_account (fname, lname, email, uname, password) values(".$fname.", ".$lname.", ".$email.", ".$uname.", ".hash('sha512', $passhash).")");
                         $sql->execute();
                         
                         echo 'Account has been created';
