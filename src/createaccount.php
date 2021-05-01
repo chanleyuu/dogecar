@@ -66,7 +66,7 @@
                         echo 'Account has been created';
                     }
                     else {
-                        echo 'passwords don\'t match' 
+                        echo 'passwords don\'t match' ;
                     }
                 
                 }
