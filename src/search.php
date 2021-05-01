@@ -7,7 +7,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// collect value of input field
 	$query = $_POST['search'];
-	$newURL = "searchpage.php?search=".$query;
+	$newURL = "index.php?page=searchpage?search=".$query;
 		if (empty($query)) {
 	       // echo "Search bar is empty";
 		} else {
