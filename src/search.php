@@ -49,7 +49,7 @@ class Search {
         $dbname = "dogecar";
         
         $results;
-
+        /*
         $conn = new mysqli($servername, $username, $password, $dbname);
         //Check connection
         if ($conn->connect_error) {
@@ -59,8 +59,11 @@ class Search {
         $sql = "SELECT id, make, model FROM inventory WHERE make = ".preg_replace('/[^a-zA-Z]/', '', $Search);
         //$sql->bind_param('s', $Search);
         $result = $conn->query($sql, MYSQLI_STORE_RESULT);
-       
-
+        */
+        $stmt = $pdo->prepare("SELECT id, make, model FROM inventory WHERE make LIKE '%?%' ");
+        $stmt->execute(array('?' = $Search));
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        /*
         if ($result->num_rows > 0) {
         // output data of each row
             $results = array($result->num_rows);
@@ -71,7 +74,7 @@ class Search {
             }
         } else {
             echo "0 results";
-        }
+        } */
 		$conn->close();
 		return $results;
     }
