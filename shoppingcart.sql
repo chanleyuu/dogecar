@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 30, 2021 at 08:29 PM
+-- Generation Time: May 01, 2021 at 01:35 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `shoppingcart`
 --
-CREATE DATABASE IF NOT EXISTS `shoppingcart` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `shoppingcart`;
 
 -- --------------------------------------------------------
 
@@ -46,6 +44,30 @@ CREATE TABLE IF NOT EXISTS `customer reviews` (
 INSERT INTO `customer reviews` (`id`, `Name`, `Email`, `Review`, `Date`) VALUES
 (22, 'Janis Joplin', 'jjoplin@gmail.com', 'Great car. Great MPG and smooth ride. 10/10', '2021-04-30 19:42:49'),
 (4, 'John Dover', 'jdover@gmail.com', 'Perfect Little car for running around the town. Small nippy engine which provides enough power for zipping around town and motorways.', '2021-04-30 21:22:42');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer_account`
+--
+
+DROP TABLE IF EXISTS `customer_account`;
+CREATE TABLE IF NOT EXISTS `customer_account` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fname` varchar(255) NOT NULL,
+  `lname` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `uname` varchar(100) NOT NULL,
+  `password` varchar(512) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customer_account`
+--
+
+INSERT INTO `customer_account` (`id`, `fname`, `lname`, `email`, `uname`, `password`) VALUES
+(1, 'Napolean', 'Bonapart', 'emperoroffrance@gouvernement.fr', 'cheems', '45BAAA05A1CB12D8507AFDD4FE0A7F7017AE13C6C632DE3BBB4E87375445445C034B769A0727186576322C48AD5A54523DAE6F74E6F1FD2554122B46FA25E400');
 
 -- --------------------------------------------------------
 
@@ -87,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `img` text NOT NULL,
   `date_added` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `products`
