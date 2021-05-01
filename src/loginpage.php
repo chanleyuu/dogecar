@@ -81,8 +81,6 @@
                 }
                 
             } else {
-				$passhash = hash('sha512', $_POST['username']).$_POST['password'];
-                echo hash('sha512', $passhash)."<br>";
                 echo "User name or password is incorrect";
             }
             $conn->close();
