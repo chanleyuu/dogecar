@@ -61,7 +61,7 @@ class Search {
         $result = $conn->query($sql, MYSQLI_STORE_RESULT);
         */
         $stmt = $pdo->prepare("SELECT id, make, model FROM inventory WHERE make LIKE '%?%' ");
-        $stmt->execute(array('?' = $Search));
+        $stmt->execute(array('?' => $Search));
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         /*
         if ($result->num_rows > 0) {
