@@ -23,7 +23,7 @@
 <?=template_header('Register')?>
 <body>
 
-    <h2>Enter Username and Password</h2>
+    <h2>Enter account information</h2>
     <div class = "sign">
     
         <?php 
@@ -87,7 +87,7 @@
          <form class = "form-signin" role = "form" 
             action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
             ?>" method = "POST">
-            <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
+            <h4 class = "form-signin-heading"></h4>
             
             <input type = "firstname" class = "form-control"
                name = "firstname" placeholder = "First Name" required>First Name</input>
