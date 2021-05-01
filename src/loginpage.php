@@ -50,13 +50,13 @@
                 
                 $query = $_POST['username']; 
                 
-                $sql = $pdo->prepare("SELECT id, make, model FROM inventory WHERE make = ".preg_replace('/[^a-zA-Z]/', '', $Search));
+                $sql = $pdo->prepare("SELECT id, make, model FROM inventory WHERE make = ".preg_replace('/[^a-zA-Z]/', '', $query));
                 //$conn->bind_param('s', $query);
                 $sql->execute();
                 $result = $sql->fetchAll(PDO::FETCH_ASSOC);
                 //$results;
 
-                if ($result->count > 0 && isset($_POST['login'])) {
+                if (count($result) > 0 && isset($_POST['login'])) {
                 // output data of each row
                // $results = array($result->num_rows);
                     foreach ($result as $value) {

@@ -54,7 +54,7 @@
                 $result = $sql->fetchAll(PDO::FETCH_ASSOC);
                 //$results;
 
-                if ($result->count > 0) {
+                if (count($result) > 0) {
                 // output data of each row
                     echo 'username already exists';
                 }
