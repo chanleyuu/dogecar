@@ -5,17 +5,17 @@
     ob_start();
     session_start();
 ?>
-
+<?=template_header('Products')?>
 <html lang = "en">
 
     <head>
         <table id="banner">
 	<tr>
 <th>
-<img src="../res/dogehead.png" alt="HTML5 Icon" style="width:128px;height:128px;" href="index.php">
+
 </th>
 <th>
-<img src="../res/logo.png" alt="HTML5 Icon" style="width:256px;height:128px;">
+
 </th>
 </tr>
 </table>
@@ -49,7 +49,7 @@
                 
                 $query = $_POST['username']; 
                 
-                $sql = $conn->prepare("SELECT id, make, model FROM inventory WHERE make = ? ") //.preg_replace('/[^a-zA-Z]/', '', $Search);
+                $sql = $conn->prepare("SELECT id, make, model FROM inventory WHERE make = ? "); //.preg_replace('/[^a-zA-Z]/', '', $Search);
                 $conn->bindValue(1, $query, PDO::PARAM_STR);
                 $result = $conn->query($sql);
                 //$results;
@@ -109,3 +109,5 @@
       
    </body>
 </html>
+
+<?=template_footer()?>
