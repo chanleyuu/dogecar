@@ -48,7 +48,7 @@
                 
                 $uname = $_POST['username']; 
                 
-                $sql = $pdo->prepare("SELECT * FROM customer_account WHERE uname = '".preg_replace('/[^a-zA-Z]/', '', $query)."'");
+                $sql = $pdo->prepare("SELECT * FROM customer_account WHERE uname = '".preg_replace('/[^a-zA-Z]/', '', $uname)."'");
                 //$conn->bind_param('s', $query);
                 $sql->execute();
                 $result = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -77,7 +77,7 @@
             } else {
                 echo "User name or password is incorrect";
             }
-            $conn->close();
+            //$conn->close();
 		
 		}
         ?>
