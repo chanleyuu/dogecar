@@ -44,7 +44,7 @@
             ?>
         </th>
         <div class="products-wrapper">
-        <?php foreach ($result as $product): ?>
+        <?php foreach ($results as $product): ?>
         <a href="index.php?page=product&id=<?=$product['id']?>" class="product">
             <img src="../res/<?=$product['img']?>" width="250" height="200" alt="<?=$product['name']?>">
             <span class="name"><?=$product['name']?></span>
