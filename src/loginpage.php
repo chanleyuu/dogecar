@@ -50,7 +50,7 @@
                 
                 $query = $_POST['username']; 
                 
-                $sql = $pdo->prepare("SELECT id, make, model FROM inventory WHERE make = ".preg_replace('/[^a-zA-Z]/', '', $query));
+                $sql = $pdo->prepare("SELECT * FROM customer_account WHERE uname = '".preg_replace('/[^a-zA-Z]/', '', $query)."'");
                 //$conn->bind_param('s', $query);
                 $sql->execute();
                 $result = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -81,6 +81,8 @@
                 }
                 
             } else {
+				$passhash = hash('sha512', $_POST['username']).$_POST['password'];
+                echo hash('sha512', $passhash)."<br>";
                 echo "User name or password is incorrect";
             }
             $conn->close();
