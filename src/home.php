@@ -7,7 +7,7 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?=template_header('Home')?>
 
 <div class="featured">
-  <img src="../res/crying doge and buff doge.jpg"  style="width:450px;height:450px;" href="index.php">
+  <img src="../res/crying doge and buff doge.jpg"  style="width:25%;height:25%;" href="index.php">
 </div>
 <div class="recentlyadded content-wrapper">
     <h2>Recently Added Products</h2>

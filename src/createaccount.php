@@ -30,10 +30,6 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ( !empty($_POST['username']) 
                && !empty($_POST['password'])) {
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "dogecar";
             
 
                // $conn = new mysqli($servername, $username, $password, $dbname);
@@ -64,10 +60,12 @@
                     $passhash = hash('sha512', $_POST['username']).$_POST['password'];
                     
                     if ($_POST['repeatpassword'] == $pass){
-                        $sql = $pdo->prepare("INSERT INTO customer_account (fname, lname, email, uname, password) values(".$fname.", ".$lname.", ".$email.", ".$uname.", ".hash('sha512', $passhash).")");
+                        $sql = $pdo->prepare("INSERT INTO customer_account (fname, lname, email, uname, password) values ('".$fname."', '".$lname."', '".$email."', '".$uname."', '".hash('sha512', $passhash)."')");
                         $sql->execute();
                         
                         echo 'Account has been created';
+						header("Location: index.php?page=finish");
+						exit();
                     }
                     else {
                         echo 'passwords don\'t match' ;
@@ -75,7 +73,7 @@
                 
                 }
             } else {
-                echo "User name or password is incorrect";
+                echo "User name or password feild is empty";
             }
             //$conn->close();
 		
