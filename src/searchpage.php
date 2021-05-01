@@ -20,9 +20,7 @@
     <!--<object data="header.php" height="20%" width="50%"></object> -->
     
 <br>
-<table>
-    <tr>
-        <th>
+
             <?php
             //results are passed as an array and displayed on this page.
                 
@@ -41,7 +39,6 @@
                     
              
             ?>
-        </th>
         <div class="products-wrapper">
         <?php foreach ($results as $product): ?>
         <a href="index.php?page=product&id=<?=$product['id']?>" class="product">
@@ -56,7 +53,4 @@
         </a>
         <?php endforeach; ?>
     </div>
-    </tr>
-</table>
 </body>
-<?=template_footer()?>

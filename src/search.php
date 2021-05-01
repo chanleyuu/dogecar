@@ -100,7 +100,7 @@ class Search {
 
 }
 ?>
- <form class = "form" role = "form" method="POST" 
+ <form class = "yes" role = "form" method="POST" 
     >
     <input type="text" name="search" />
     <input class="yes" type="submit" value="Search" ></input>
