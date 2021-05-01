@@ -5,7 +5,7 @@
    // ob_start();
    // session_start();
 ?>
-<?=template_header('Home')?>
+<?=template_header('Login')?>
 
 <html lang = "en">
  <?php /*

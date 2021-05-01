@@ -93,10 +93,10 @@
                name = "firstname" placeholder = "First Name" required>First Name</input>
                </br>
             <input type = "lastname" class = "form-control"
-               name = "lastname" placeholder = "Last Name" required>First Name</input>
+               name = "lastname" placeholder = "Last Name" required>Last Name</input>
                </br>
             <input type = "email" class = "form-control"
-               name = "email" placeholder = "email" required>First Name</input>
+               name = "email" placeholder = "email" required>Email</input>
                </br>
             <input type = "text" class = "form-control" 
                name = "username" placeholder = "username" required>Username</input>
@@ -106,8 +106,9 @@
                </br>
             <input type = "repeatpassword" class = "form-control"
                name = "repeatpassword" required>Repeat Password</input>
+               <br>
             <button class = "btn btn-lg btn-primary btn-block" type = "submit" 
-               name = "login">Login</button>
+               name = "login">Create</button>
          </form>
          
       </div> 
