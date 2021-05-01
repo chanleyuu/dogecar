@@ -1,6 +1,6 @@
 <?=template_header('Search')?>
 <?php
-//include("searchpage.php");
+include("functions.php");
 
 	// Create connection
 	
