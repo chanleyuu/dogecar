@@ -15,9 +15,9 @@ The search page is a pretty simple one, it’s a dedicated page that allows the 
 Search Function:
 
 
-Database:
+Database:shoppingcart
 Below are the usernames and passwords needed to access the database.
-Username:
-Password:
+Username:cheems
+Password:doge
 
 ERD:
