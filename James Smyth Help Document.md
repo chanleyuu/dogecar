@@ -18,6 +18,6 @@ Search Function:
 Database:shoppingcart
 Below are the usernames and passwords needed to access the database.
 Username:cheems
-Password:doge
+Password:f96ASR8t
 
 ERD:
